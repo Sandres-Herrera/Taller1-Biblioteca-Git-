@@ -20,4 +20,30 @@ public class Main {
     public static void main(String[] args) {
         
     }
+    
+    static void crearCliente() {
+    System.out.print("Ingrese el nombre del cliente: ");
+    String nombre = sc.nextLine();
+
+    System.out.print("Ingrese la identificacion del cliente: ");
+    String identificacion = sc.nextLine();
+
+    System.out.print("Ingrese el codigo del cliente: ");
+    int codigoCliente = Integer.parseInt(sc.nextLine());
+
+    System.out.print("Ingrese el telefono del cliente: ");
+    String telefono = sc.nextLine();
+
+    Cliente cliente = new Cliente(
+        nombre,
+        identificacion,
+        codigoCliente,
+        telefono
+    );
+
+    clientes.add(cliente);
+
+    System.out.println("Cliente creado correctamente.");
 }
+}
+
