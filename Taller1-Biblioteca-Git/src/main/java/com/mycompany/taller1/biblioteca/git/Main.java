@@ -62,5 +62,25 @@ public class Main {
 
     System.out.println("-------------------------");
     }
+    
+    static void buscarCliente() {
+    System.out.print("Ingrese la identificacion del cliente: ");
+    String identificacion = sc.nextLine();
+
+    for (Cliente cliente : clientes) {
+        if (cliente.getIdentificacion().equals(identificacion)) {
+
+            System.out.println("Cliente encontrado.");
+            System.out.println("Nombre: " + cliente.getNombre());
+            System.out.println("Identificacion: " + cliente.getIdentificacion());
+            System.out.println("Codigo: " + cliente.getCodigoCliente());
+            System.out.println("Telefono: " + cliente.getTelefono());
+
+            return;
+        }
+    }
+
+    System.out.println("Cliente no encontrado.");
+    }
 }
 
